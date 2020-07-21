@@ -1,0 +1,43 @@
+﻿@model QLNV_VC.Models.QuanTri
+
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông tin chi tiết</h2>
+
+<div>
+    <h4>Quản Trị</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Admin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admin)
+        </dd>
+
+        <dt>
+            Họ tên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            Mật khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.Email }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>
